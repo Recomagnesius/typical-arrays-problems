@@ -5,7 +5,13 @@ exports.min = function min(array) {
     // minArray.sort((a, b) => b - a);
     // return minArray[0];
     let min = Math.min(...array);
-    return min;
+    if (min === Infinity) {
+      return 0;
+    }
+    else if (min != Infinity) {
+      return min;
+    }
+    
   }
   else {
     return 0;
