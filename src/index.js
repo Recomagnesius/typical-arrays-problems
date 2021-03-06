@@ -1,34 +1,39 @@
 
 exports.min = function min(array) {
   if (array != undefined) {
-    let minArray = array;
-    minArray.sort((a, b) => b - a);
-    return minArray[0];
+    // let minArray = array;
+    // minArray.sort((a, b) => b - a);
+    // return minArray[0];
+    let min = Math.min(...array);
+    return min;
   }
   else {
     return 0;
   }
 }
 
-exports.max = function max (array) {
+exports.max = function max(array) {
   if (array != undefined) {
-    let maxArray = array;
-    maxArray.sort((a, b) => b - a);
-    maxArray = maxArray[maxArray.length - 1];
-    return maxArray;
+    // let maxArray = array;
+    // maxArray.sort((a, b) => b - a);
+    // maxArray = maxArray[maxArray.length - 1];
+    let max = Math.max(...array);
+    return max;
   }
   else {
     return 0;
+  }
 }
 
-exports.avg = function avg (array) {
+exports.avg = function avg(array) {
   if (array != undefined) {
     var sum = 0;
-    for(var i = 0; i < array.length; i++){
+    for (var i = 0; i < array.length; i++) {
       sum += array[i];
-      return sum / array.length;
     }
+    return sum / array.length;
   }
   else {
     return 0;
+  }
 }
