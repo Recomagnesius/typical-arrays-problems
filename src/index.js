@@ -19,7 +19,7 @@ exports.min = function min(array) {
 }
 
 exports.max = function max(array) {
-  if (array != undefined) {
+  if (array != undefined && array.length != 0) {
     // let maxArray = array;
     // maxArray.sort((a, b) => b - a);
     // maxArray = maxArray[maxArray.length - 1];
@@ -32,7 +32,7 @@ exports.max = function max(array) {
 }
 
 exports.avg = function avg(array) {
-  if (array != undefined) {
+  if (array != undefined && array.length != 0) {
     var sum = 0;
     for (var i = 0; i < array.length; i++) {
       sum += array[i];
